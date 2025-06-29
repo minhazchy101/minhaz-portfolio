@@ -1,33 +1,47 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
-    return (
-        <>
-          <section id="about" className="bg-base-100 py-16 px-4">
+  return (
+    <section id="about" className="bg-base-100 py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-primary">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold text-center mb-6 text-primary"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           About Me
-        </h2>
+        </motion.h2>
 
-        <p className="text-gray-700 text-lg leading-relaxed mb-4">
-          I'm Minhaz from Sylhet, Bangladesh — a passionate learner who enjoys building websites that live on the internet. From the very beginning of my learning journey, I was deeply curious about how code works. That curiosity led me to start with HTML and CSS, and soon I discovered the exciting world of web development, including JavaScript, React, and more.
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="space-y-5 text-base-content text-lg leading-relaxed"
+        >
+          <p>
+            I'm <span className="text-secondary font-medium">Minhaz</span> from <span className="text-secondary font-medium">Sylhet, Bangladesh</span> — a passionate learner who enjoys building websites that live on the internet.
+            My curiosity about how code works led me to learn <span className="text-primary font-medium">HTML</span> and <span className="text-primary font-medium">CSS</span>, which opened the door to the exciting world of web development.
+          </p>
 
-        <p className="text-gray-700 text-lg leading-relaxed mb-4">
-          At first, I loved working with HTML and CSS. But when I stepped into JavaScript and started exploring core concepts seriously, I faced real challenges. Those struggles, however, pushed me to stay committed and helped me grow stronger as a learner.
-        </p>
+          <p>
+            I initially enjoyed styling pages, but diving into <span className="text-primary font-medium">JavaScript</span> and its core concepts challenged me. Those challenges pushed me to grow stronger, stay focused, and build problem-solving skills that now shape my development journey.
+          </p>
 
-        <p className="text-gray-700 text-lg leading-relaxed mb-4">
-          Outside of coding, I enjoy reading books and traveling. I'm especially fond of novels and exploring new genres. Traveling helps me recharge and connect with friends and family, making every journey memorable.
-        </p>
+          <p>
+            Beyond the screen, I enjoy <span className="text-secondary font-medium">reading books</span> and <span className="text-secondary font-medium">traveling</span>. Whether diving into novels or exploring new places, these activities help me recharge and stay connected with loved ones.
+          </p>
 
-        <p className="text-gray-700 text-lg leading-relaxed">
-          These days, I'm spending most of my time with code and books. From a book lover to a code learner — I'm truly enjoying the journey, by the grace of Allah.
-        </p>
+          <p>
+            Today, I'm spending my time between <span className="text-primary font-medium">code lines and book pages</span>. From a book lover to a code learner — I'm truly enjoying this journey, by the grace of Allah.
+          </p>
+        </motion.div>
       </div>
-    </section>   
-        </>
-    );
+    </section>
+  );
 };
 
 export default About;
