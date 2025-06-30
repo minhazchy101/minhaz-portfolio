@@ -1,42 +1,43 @@
 
-import './App.css'
-import TheNavbar from './components/TheNavbar'
-import About from './sections/About'
-import Contact from './sections/Contact'
-import Introduction from './sections/Introduction'
-import Projects from './sections/Projects'
-import Skills from './sections/Skills'
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router';
 
-function App() {
+// Components and Sections
+import TheNavbar from './components/TheNavbar';
+import Introduction from './sections/Introduction';
+import About from './sections/About';
+import Skills from './sections/Skills';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
+import ProjectDetails from './Pages/ProjectDetails';
  
 
+// Home page layout
+function HomePage() {
   return (
     <>
-    
-    {/* navbar */}
-    <TheNavbar></TheNavbar>
+      <TheNavbar />
 
-    {/* main */}
-    <main>
-    <Introduction></Introduction>
-
-    <About></About>
-
-    <Skills></Skills>
-
-    <Projects></Projects>
-
-    <Contact></Contact>
-
-    </main>
-
-
-    {/* footer */}
-    
-     
-     
+      <main>
+        <Introduction />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/project/:id" element={<ProjectDetails />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

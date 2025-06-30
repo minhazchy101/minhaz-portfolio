@@ -1,7 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router';
 
 const projects = [
+  {
+    title: 'Car Ride',
+    description: 'Car Ride is a user-friendly car-sharing and booking web application where users can book available cars for their rides, set or update trip times, and even post their own cars for others to book.',
+    features: [
+      ' User Authentication',
+      'Car Booking',
+      'List Your Car',
+      'Booking Management'
+    ],
+    tech: ['React', 'react-router', 'Tailwind', 'Firebase' , 'mongodb'],
+    image: 'https://i.ibb.co/1tNyptw8/Screenshot-5.png',
+    live: 'https://car-ride-89b09.web.app/',
+    github: 'https://github.com/minhazchy101/Car-Ride',
+    details: '/project/carRide'
+  },
   {
     title: 'Hubby Hub',
     description: 'HobbyHub is a hobby-based social platform where users can discover, join, or create interest groups and events.',
@@ -15,22 +31,9 @@ const projects = [
     image: 'https://i.ibb.co/TqtmjTgD/Screenshot-4.png',
     live: 'https://assignment-ten-4fa46.web.app/',
     github: 'https://github.com/minhazchy101/hobby_hub_client',
-    details: '#'
+    details: '/project/hubbyHub'
   },
-  {
-    title: 'Project Two',
-    description: 'FreshCrate is a React-based web app for subscribing to fresh, organic vegetable deliveries. Built with Firebase for authentication and hosting.',
-    features: [
-      'User Profile',
-      'Firebase Authentication Integration',
-      'Responsive Design'
-    ],
-    tech: ['React', 'react-router', 'Tailwind', 'Firebase'],
-    image: 'https://via.placeholder.com/300x180.png?text=Project+Two',
-    live: 'https://nest-crate-service-platform.web.app/',
-    github: '#',
-    details: '#'
-  },
+
   {
     title: 'Flower Web',
     description: ' A simple flower shop website | | Built with HTML, CSS',
@@ -43,7 +46,7 @@ const projects = [
     image: 'https://i.ibb.co/nq6Lhwyw/Screenshot-3.png',
     live: 'https://minhazchy101.github.io/flower-web/',
     github: 'https://github.com/minhazchy101/flower-web',
-    details: '#'
+    details: '/project/flowerWeb'
   },
 ];
 
@@ -103,7 +106,7 @@ const Projects = () => {
                 <div className="flex gap-3 pt-3">
                   <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-success btn-sm">Live</a>
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">GitHub</a>
-                  <a href={project.details} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm">Details</a>
+                  <Link to={project.details} className="btn btn-secondary btn-sm">Details</Link>
                 </div>
               </motion.div>
             </motion.div>
