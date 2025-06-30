@@ -67,13 +67,13 @@ const Contact = () => {
             <div className="bg-base-100 rounded-xl p-6 shadow-md text-center">
               <FiPhone className="mx-auto text-3xl text-secondary mb-3" />
               <h4 className="text-xl font-semibold text-primary mb-1">Phone</h4>
-              <p>+880 1234 567890</p>
+              <p>+880 1763352974</p>
             </div>
 
             <div className="bg-base-100 rounded-xl p-6 shadow-md text-center">
               <FiMessageSquare className="mx-auto text-3xl text-secondary mb-3" />
               <h4 className="text-xl font-semibold text-primary mb-1">WhatsApp</h4>
-              <p>+880 1234 567890</p>
+              <p>+880 1763352974</p>
             </div>
           </motion.div>
 

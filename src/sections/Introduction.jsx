@@ -36,7 +36,8 @@ const Introduction = () => {
             </p>
 
             <a
-              href="/Minhaz_Resume.pdf"
+              href="#"
+              // href="/Minhaz_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
@@ -63,7 +64,7 @@ const Introduction = () => {
             <img
               src="https://i.ibb.co/RptXfyXj/portfolio.jpg"
               alt="Minhaz Chowdhury"
-              className="rounded-full shadow-2xl max-w-xs"
+              className="rounded-full shadow-2xl max-w-lg"
             />
           </motion.div>
         </motion.div>
