@@ -3,19 +3,68 @@ import { Link } from 'react-scroll';
 
 const TheNavbar = () => {
     const link = <>
-     <li><Link to="about" smooth={true} duration={500} offset={-70}  spy={true} activeClass="active">About Me</Link></li>
-     <li><Link to="skills" smooth={true} duration={500} offset={-70}  spy={true} activeClass="active">Skills</Link></li>
-     <li><Link to="projects" smooth={true} duration={500} offset={-70}  spy={true} activeClass="active">Projects</Link></li>
-      
-     
-      <li><a>Contact </a></li>
-    </>
+  <li>
+    <Link
+      to="about"
+      smooth={true}
+      duration={500}
+      offset={-70}
+      spy={true}
+      activeClass="text-accent font-semibold"
+      className="text-secondary text-lg font-semibold hover:text-accent hover:font-bold transition-colors duration-300"
+    >
+      About Me
+    </Link>
+  </li>
+  <li>
+    <Link
+      to="skills"
+      smooth={true}
+      duration={500}
+      offset={-70}
+      spy={true}
+      activeClass="text-accent font-semibold"
+      className="text-secondary text-lg font-semibold hover:text-accent hover:font-bold transition-colors duration-300"
+    >
+      Skills
+    </Link>
+  </li>
+  <li>
+    <Link
+      to="projects"
+      smooth={true}
+      duration={500}
+      offset={-70}
+      spy={true}
+      activeClass="text-accent font-semibold"
+      className="text-secondary text-lg font-semibold hover:text-accent hover:font-bold transition-colors duration-300"
+    >
+      Projects
+    </Link>
+  </li>
+  <li>
+    <Link  to="contact"
+      smooth={true}
+      duration={500}
+      offset={-70}
+      spy={true} className="text-secondary text-lg font-semibold hover:text-accent hover:font-bold transition-colors duration-300">
+      Contact
+    </Link>
+  </li>
+</>
+
     return (
-        <div className='bg-base-100 shadow-sm sticky top-0 z-50'>
+        <div className='bg-primary shadow-sm sticky top-0 z-50'>
          <div className="navbar md:max-w-7xl w-full mx-auto">
   <div className="navbar-start">
     
-    <a className="btn btn-ghost text-xl">Minhaz</a>
+      <Link  to="home"
+      smooth={true}
+      duration={500}
+      offset={-70}
+      spy={true} className="text-secondary text-2xl cursor-pointer font-bold hover:text-accent hover:font-bold transition-colors duration-300">
+      Minhaz
+    </Link>
   </div>
   <div className="navbar-end">
   <div className="hidden lg:flex">
